@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "productos",
+  "info": {
+    "singularName": "producto",
+    "pluralName": "productos",
+    "displayName": "Productos",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_producto": {
+      "type": "uid"
+    },
+    "Nombre": {
+      "type": "string"
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "categorias": {
+      "type": "json"
+    },
+    "tags": {
+      "type": "json"
+    },
+    "imagen_Producto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "precio": {
+      "type": "decimal"
+    },
+    "SKU": {
+      "type": "string"
+    },
+    "cantidad": {
+      "type": "integer"
+    },
+    "Ancho": {
+      "type": "string"
+    },
+    "Largo": {
+      "type": "string"
+    },
+    "Profundidad": {
+      "type": "string"
+    },
+    "peso": {
+      "type": "string"
+    },
+    "precio_envio": {
+      "type": "decimal"
+    },
+    "ordene": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ordene.ordene",
+      "inversedBy": "productos"
+    }
+  }
+}

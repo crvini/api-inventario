@@ -1,0 +1,61 @@
+{
+    "kind": "collectionType",
+    "collectionName": "ordenes",
+    "info": {
+        "singularName": "ordene",
+        "pluralName": "ordenes",
+        "displayName": "Ordenes",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "id_order": {
+            "type": "uid"
+        },
+        "referencia": {
+            "type": "string"
+        },
+        "cliente": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::cliente.cliente",
+            "inversedBy": "ordenes"
+        },
+        "total": {
+            "type": "decimal"
+        },
+        "Estatus": {
+            "type": "json"
+        },
+        "Fecha": {
+            "type": "datetime"
+        },
+        "Direccion": {
+            "type": "text"
+        },
+        "Direccion_facturacion": {
+            "type": "text"
+        },
+        "productos": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::producto.producto",
+            "mappedBy": "ordene"
+        },
+        "datos_pago": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::datos-pago.datos-pago",
+            "inversedBy": "ordene"
+        },
+        "envio": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::envio.envio",
+            "inversedBy": "ordene"
+        }
+    }
+}

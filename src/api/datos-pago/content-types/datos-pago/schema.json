@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "datos_pagos",
+  "info": {
+    "singularName": "datos-pago",
+    "pluralName": "datos-pagos",
+    "displayName": "Datos_pago"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "id_transaccion": {
+      "type": "uid"
+    },
+    "Metodo_pago": {
+      "type": "string"
+    },
+    "cantidad": {
+      "type": "integer"
+    },
+    "Fecha": {
+      "type": "datetime"
+    },
+    "ordene": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::ordene.ordene",
+      "inversedBy": "datos_pago"
+    }
+  }
+}

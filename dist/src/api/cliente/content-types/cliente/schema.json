@@ -1,0 +1,51 @@
+{
+    "kind": "collectionType",
+    "collectionName": "clientes",
+    "info": {
+        "singularName": "cliente",
+        "pluralName": "clientes",
+        "displayName": "Clientes"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Nombre": {
+            "type": "string"
+        },
+        "Tags": {
+            "type": "json"
+        },
+        "Puesto": {
+            "type": "string"
+        },
+        "Compania": {
+            "type": "string"
+        },
+        "email": {
+            "type": "email"
+        },
+        "numero": {
+            "type": "integer"
+        },
+        "Direccion": {
+            "type": "text"
+        },
+        "Fecha_nacimiento": {
+            "type": "date"
+        },
+        "Notas": {
+            "type": "text"
+        },
+        "id_clientes": {
+            "type": "uid"
+        },
+        "ordenes": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::ordene.ordene",
+            "mappedBy": "cliente"
+        }
+    }
+}
