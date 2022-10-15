@@ -30,7 +30,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::ordene.ordene",
-      "inversedBy": "envio"
+      "mappedBy": "envio"
     }
   }
 }

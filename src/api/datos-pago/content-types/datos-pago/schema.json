@@ -27,7 +27,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::ordene.ordene",
-      "inversedBy": "datos_pago"
+      "mappedBy": "datos_pago"
     }
   }
 }

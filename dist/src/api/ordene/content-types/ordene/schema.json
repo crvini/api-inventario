@@ -56,6 +56,12 @@
             "relation": "oneToOne",
             "target": "api::envio.envio",
             "inversedBy": "ordene"
+        },
+        "cliente_quemado": {
+            "type": "json"
+        },
+        "productos_quemados": {
+            "type": "json"
         }
     }
 }
